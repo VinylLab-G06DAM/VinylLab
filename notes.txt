@@ -1,0 +1,23 @@
+Español:
+
+Funcionamiento de la API.
+
+Vamos a dividir la API en un archivo por cada función para no tener muchos problemas a la hora de modificarlo separadamente.
+Crearé un archivo con la variable donde la API atacará para que funcione correctamente.
+
+Usaremos GET, GET (id), SET, DELETE, DELETE (id).
+Víctor -> GET.
+Erik -> ?
+Qingfei -> ?
+
+English:
+
+API's functionality.
+
+We'll devide the API in a file for each function, so we have no problems when modifying it separatedly.
+I'll create a file with the global variable where the API will get all the information from.
+
+We'll use GET, GET (id), SET, DELETE, DELETE (id).
+Víctor -> GET
+Erik -> ?
+Qingfei -> ?
