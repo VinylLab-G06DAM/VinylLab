@@ -1,3 +1,5 @@
+API: FastAPI
+
 Español:
 
 Funcionamiento de la API.
@@ -7,8 +9,8 @@ Crearé un archivo con la variable donde la API atacará para que funcione corre
 
 Usaremos GET, GET (id), SET, DELETE, DELETE (id).
 Víctor -> GET.
-Erik -> ?
-Qingfei -> ?
+Erik -> DELETE.
+Qingfei -> SET.
 
 English:
 
@@ -18,6 +20,6 @@ We'll devide the API in a file for each function, so we have no problems when mo
 I'll create a file with the global variable where the API will get all the information from.
 
 We'll use GET, GET (id), SET, DELETE, DELETE (id).
-Víctor -> GET
-Erik -> ?
-Qingfei -> ?
+Víctor -> GET.
+Erik -> DELETE.
+Qingfei -> SET.
