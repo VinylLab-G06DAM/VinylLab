@@ -2,10 +2,16 @@ API: FastAPI (https://www.geeksforgeeks.org/python/fastapi-tutorial/)
 
 Español:
 
-Usaremos GET, GET (id), SET, DELETE, DELETE (id).
-Víctor -> GET.
-Erik -> DELETE.
-Qingfei -> SET.
+1.	GET -> Obtiene todos los objetos.
+2.	GET (ID) -> Obtiene el objeto que coincida con la ID, o devuelve un error si dicha ID no es encontrada.
+3.	SET -> Agrega un nuevo objeto.
+4.	DELETE -> Elimina todos los objetos existentes.
+5.	DELETE (ID) -> Elimina el objeto existente de ID coincidente con la otorgada, o devuelve error en caso de no encontrar dicha ID.
+
+Organización:
+- Víctor -> GET, GET (id).
+- Erik -> DELETE, DELETE (id).
+- Qingfei -> SET.
 
 Ejecutar la aplicación escribiendo 'uvicorn main:app --reload' en la terminal.
 Para usar la api busca 'http://127.0.0.1:8000/' en tu nabegador.
@@ -13,10 +19,16 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 
 English:
 
-We'll use GET, GET (id), SET, DELETE, DELETE (id).
-Víctor -> GET.
-Erik -> DELETE.
-Qingfei -> SET.
+1.	GET -> Gets all objects.
+2.	GET (ID) -> Gets the object which ID matches the given one, otherwise returns an error if named ID is not found.
+3.	SET -> Adds a new object.
+4.	DELETE -> Deletes all existing objects.
+5.	DELETE (ID) -> Deletes the object which ID matches the given one, otherwise returns an error if named ID is not found.
+
+Organization:
+- Víctor -> GET.
+- Erik -> DELETE.
+- Qingfei -> SET.
 
 Execute the app by writing 'uvicorn main:app --reload' on the terminal.
 To use the api search for 'http://127.0.0.1:8000' in your browser.
