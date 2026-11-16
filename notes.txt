@@ -1,25 +1,21 @@
-API: FastAPI
+API: FastAPI (https://www.geeksforgeeks.org/python/fastapi-tutorial/)
 
 Español:
-
-Funcionamiento de la API.
-
-Vamos a dividir la API en un archivo por cada función para no tener muchos problemas a la hora de modificarlo separadamente.
-Crearé un archivo con la variable donde la API atacará para que funcione correctamente.
 
 Usaremos GET, GET (id), SET, DELETE, DELETE (id).
 Víctor -> GET.
 Erik -> DELETE.
 Qingfei -> SET.
 
+Ejecutar la aplicación escribiendo 'uvicorn main:app --reload' en la terminal.
+Para usar la api, buscar 'http://127.0.0.1:8000/' en tu nabegador.
+
 English:
-
-API's functionality.
-
-We'll devide the API in a file for each function, so we have no problems when modifying it separatedly.
-I'll create a file with the global variable where the API will get all the information from.
 
 We'll use GET, GET (id), SET, DELETE, DELETE (id).
 Víctor -> GET.
 Erik -> DELETE.
 Qingfei -> SET.
+
+Execute the app by writing 'uvicorn main:app --reload' on the terminal.
+To use the api search for 'http://127.0.0.1:8000' in your browser.
