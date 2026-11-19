@@ -68,6 +68,7 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 # RESERVATIONS
 1.  getreservations
 2.  postreservation      (ID)
+3.  setreservation
 
 ## DESKTOP
 
