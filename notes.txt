@@ -56,7 +56,7 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 ## MOVIL
 
 # USERS
-1.  getuser     (ID)
+1.  getuser (ID)
 
 # VINYLS
 1.  getallvinyls
@@ -67,7 +67,7 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 
 # RESERVATIONS
 1.  getreservations
-2.  postreservation      (ID)
+2.  postreservation (ID)
 3.  setreservation
 
 ## DESKTOP
