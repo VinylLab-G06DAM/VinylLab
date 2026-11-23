@@ -8,30 +8,42 @@ from vinyl import Vinyl;
 
 app = FastAPI();
 
-def readVinyls(self):
-    DDBB_PATH = Path(__file__).with_name("ddbb.json");
+def readVinyls():
+    VINYL_DDBB_PATH = Path(__file__).with_name("vinyl_ddbb.json");
     
-    content = DDBB_PATH.read_text(encoding="utf-8");
+    content = VINYL_DDBB_PATH.read_text(encoding="utf-8");
             
     if not content.strip():
         return [];
             
     return [Vinyl.model_validate(item) for item in json.loads(content)];
 
+def insertVinyl(v: Vinyl):
+    VINYL_DDBB_PATH = Path(__file__).with_name("vinyl_ddbb.json");
+
+    data = json.loads(VINYL_DDBB_PATH.read_text(encoding="utf-8") or '{}');
+    data.setdefault("vinyls", []).append(v.model_dump());
+
+    VINYL_DDBB_PATH.write_text(json.dumps(data, indent=4), encoding="utf-8");
+
 @app.get("/")
 def introduction() -> None:
     return {"message": "Hello World!"};
 
-@app.get("/get")
-def getAll(self) -> list:
-    return self.readVinyls();
+@app.get("/getvinyls")
+def getAll() -> list:
+    return readVinyls();
 
-@app.get("/get/{id}")
-def getAll(self, id: int) -> Vinyl:
-    items = self.readVinyls();
+@app.get("/getvinyls/{id}")
+def getAll(id: int) -> Vinyl:
+    items = readVinyls();
         
     for vinyl in items:
         if vinyl.id == id:
             return vinyl;
 
     raise HTTPException(status_code=404, detail="Vinyl not found");
+
+@app.post("/postvinyl/{vinyl}")
+def postVinyl(v: Vinyl):
+    insertVinyl(v);
