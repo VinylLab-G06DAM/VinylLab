@@ -9,7 +9,7 @@ from vinyl import Vinyl;
 app = FastAPI();
 
 def readVinyls():
-    VINYL_DDBB_PATH = Path(__file__).with_name("vinyl_ddbb.json");
+    VINYL_DDBB_PATH = Path("../").with_name("vinyl_ddbb.json");
     
     content = VINYL_DDBB_PATH.read_text(encoding="utf-8");
             
@@ -19,7 +19,7 @@ def readVinyls():
     return [Vinyl.model_validate(item) for item in json.loads(content)];
 
 def insertVinyl(v: Vinyl):
-    VINYL_DDBB_PATH = Path(__file__).with_name("vinyl_ddbb.json");
+    VINYL_DDBB_PATH = Path("../").with_name("vinyl_ddbb.json");
 
     data = json.loads(VINYL_DDBB_PATH.read_text(encoding="utf-8") or '{}');
     data.setdefault("vinyls", []).append(v.model_dump());

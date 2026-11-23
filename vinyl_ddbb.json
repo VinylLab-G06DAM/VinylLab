@@ -5,6 +5,12 @@
             "name": "K\u00e4rlek \u00e4r ett brev skickat tusen g\u00e5nger",
             "author": "H\u00e5lland Hellstr\u00f6m",
             "price": 20.0
+        },
+        {
+            "id": 2,
+            "name": "Test",
+            "author": "string",
+            "price": 1.0
         }
     ]
 }

@@ -47,7 +47,7 @@ API: FastAPI (https://www.geeksforgeeks.org/python/fastapi-tutorial/)
 4.  postreservation     (ID)
 5.  deletereservation   (ID)
 
-Ejecutar la aplicación escribiendo 'uvicorn main:app --reload' en la terminal.
+Ejecutar la aplicación escribiendo 'uvicorn movil.vinyl_api:app --reload' en la terminal.
 Para usar la api busca 'http://127.0.0.1:8000/' en tu nabegador.
 Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 
