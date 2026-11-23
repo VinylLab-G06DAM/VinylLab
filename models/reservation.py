@@ -12,7 +12,7 @@ RESERVATIONS_KEY = "reservations"
 class Reservation(BaseModel):
     """Reservation schema shared across mobile and desktop APIs (same names as the SQL table)."""
 
-    id: int
+    id: int = 0  # assigned by insertReservation
     client_id: int
     service_id: int
     reservation_date: date
