@@ -1,11 +1,11 @@
+import json
 from datetime import date, time
+from pathlib import Path
 
 from fastapi import HTTPException
 from pydantic import BaseModel
 
-from data.json_db import read_collection, write_collection
-
-RESERVATIONS_FILE = "reservations_ddbb.json"
+RESERVATIONS_PATH = Path(__file__).resolve().parents[1] / "ddbb" / "reservations_ddbb.json"
 RESERVATIONS_KEY = "reservations"
 
 
@@ -23,11 +23,19 @@ class Reservation(BaseModel):
 
 
 def readReservations() -> list[Reservation]:
-    return [Reservation.model_validate(item) for item in read_collection(RESERVATIONS_FILE, RESERVATIONS_KEY)]
+    if not RESERVATIONS_PATH.exists():
+        return []
+
+    content = RESERVATIONS_PATH.read_text(encoding="utf-8")
+    if not content.strip():
+        return []
+
+    return [Reservation.model_validate(item) for item in json.loads(content).get(RESERVATIONS_KEY, [])]
 
 
 def saveReservations(reservations: list[Reservation]) -> None:
-    write_collection(RESERVATIONS_FILE, RESERVATIONS_KEY, [r.model_dump(mode="json") for r in reservations])
+    data = {RESERVATIONS_KEY: [r.model_dump(mode="json") for r in reservations]}
+    RESERVATIONS_PATH.write_text(json.dumps(data, indent=4, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def insertReservation(r: Reservation) -> Reservation:

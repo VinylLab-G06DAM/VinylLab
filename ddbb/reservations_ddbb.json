@@ -1,3 +1,64 @@
 {
-    "reservations": []
+    "reservations": [
+        {
+            "id": 1,
+            "client_id": 1,
+            "service_id": 1,
+            "reservation_date": "2026-12-04",
+            "starts_at": "10:00:00",
+            "ends_at": "11:00:00",
+            "status": "CONFIRMED",
+            "notes": "Dos discos con polvo acumulado."
+        },
+        {
+            "id": 2,
+            "client_id": 2,
+            "service_id": 2,
+            "reservation_date": "2026-12-04",
+            "starts_at": "11:30:00",
+            "ends_at": "13:00:00",
+            "status": "PENDING",
+            "notes": "Llevara el tocadiscos a la tienda."
+        },
+        {
+            "id": 3,
+            "client_id": 3,
+            "service_id": 4,
+            "reservation_date": "2026-12-04",
+            "starts_at": "16:00:00",
+            "ends_at": "16:45:00",
+            "status": "PENDING",
+            "notes": null
+        },
+        {
+            "id": 4,
+            "client_id": 1,
+            "service_id": 6,
+            "reservation_date": "2026-12-05",
+            "starts_at": "11:00:00",
+            "ends_at": "12:00:00",
+            "status": "CONFIRMED",
+            "notes": null
+        },
+        {
+            "id": 5,
+            "client_id": 2,
+            "service_id": 1,
+            "reservation_date": "2026-11-12",
+            "starts_at": "10:00:00",
+            "ends_at": "11:00:00",
+            "status": "COMPLETED",
+            "notes": "Servicio completado."
+        },
+        {
+            "id": 6,
+            "client_id": 3,
+            "service_id": 5,
+            "reservation_date": "2026-11-12",
+            "starts_at": "16:00:00",
+            "ends_at": "18:00:00",
+            "status": "CANCELLED",
+            "notes": "Cancelada por la clienta."
+        }
+    ]
 }
