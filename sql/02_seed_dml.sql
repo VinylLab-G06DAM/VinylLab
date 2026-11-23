@@ -1,0 +1,1 @@
+-- Task 1: PostgreSQL DML (INSERT dummy test data)

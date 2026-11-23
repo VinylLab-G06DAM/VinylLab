@@ -23,6 +23,7 @@ VinylLab/
 │   └── reservation.py           # Reservation model (Eric)
 │
 ├── data/                        # Temporary JSON databases (before PostgreSQL)
+│   ├── json_db.py               # Shared JSON read/write helper
 │   ├── users_ddbb.json
 │   ├── vinyl_ddbb.json
 │   ├── services_ddbb.json
@@ -78,6 +79,7 @@ VinylLab/
 │   └── reservation.py           # Modelo Reservation (Eric)
 │
 ├── data/                        # Bases de datos JSON temporales (antes de PostgreSQL)
+│   ├── json_db.py               # Helper compartido para leer/escribir JSON
 │   ├── users_ddbb.json
 │   ├── vinyl_ddbb.json
 │   ├── services_ddbb.json
