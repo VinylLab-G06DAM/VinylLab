@@ -38,3 +38,12 @@ def getAll(id: int) -> Vinyl:
             return vinyl;
 
     raise HTTPException(status_code=404, detail="Vinyl not found");
+
+@app.delete("/delete/{id}")
+def delete(id: int) -> Vinyl:
+    for vinyl in items:
+        if vinyl.id == id:
+            items.remove(vinyl);
+            return vinyl;
+
+    raise HTTPException(status_code=404, detail="Vinyl not found");
