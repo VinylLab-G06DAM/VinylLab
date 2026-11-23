@@ -1,13 +1,15 @@
 from fastapi import FastAPI, HTTPException;
 
-from vinyl import *;
+from models.vinyl import *;
 
 app = FastAPI();
 
+#TEST
 @app.get("/")
 def introduction() -> None:
     return {"message": "Hello World!"};
 
+#GET
 @app.get("/getvinyls")
 def getAll() -> list:
     return readVinyls();
@@ -22,6 +24,18 @@ def getAll(id: int) -> Vinyl:
 
     raise HTTPException(status_code=404, detail="Vinyl not found");
 
+#POST
 @app.post("/postvinyl/{vinyl}")
 def postVinyl(v: Vinyl):
     insertVinyl(v);
+
+#PUT
+@app.put("/putvinyl/{id}")
+def updateVinyl(id: int, v: Vinyl):
+    for v in readVinyls():
+        if v.id == id:
+            updateVinyl(v);
+
+            return;
+
+    raise HTTPException(status_code=404, detail="Vinyl not found");

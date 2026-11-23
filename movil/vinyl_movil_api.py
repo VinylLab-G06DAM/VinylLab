@@ -1,13 +1,15 @@
 from fastapi import FastAPI, HTTPException;
 
-from vinyl import *;
+from models.vinyl import *;
 
 app = FastAPI();
 
+#TEST
 @app.get("/")
 def introduction() -> None:
     return {"message": "Hello World!"};
 
+#GET
 @app.get("/getvinyls")
 def getAll() -> list:
     return readVinyls();
