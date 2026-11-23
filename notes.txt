@@ -24,12 +24,12 @@ API: FastAPI (https://www.geeksforgeeks.org/python/fastapi-tutorial/)
 1.  getallclients
 2.  getclient         (ID)
 3.  postclient        (ID)
-4.  setclient
+4.  putclient
 5.  deleteclient      (ID)
 
 # SERVICES
 1.  getallservices  (ID)
-2.  setservice
+2.  putservice
 3.  postservice     (ID)
 4.  deleteservice   (ID)
 
@@ -37,13 +37,13 @@ API: FastAPI (https://www.geeksforgeeks.org/python/fastapi-tutorial/)
 1.  getallvinyls
 2.  getvinyl        (ID)
 3.  postvinyl       (ID)
-4.  setvinyl
+4.  putvinyl
 5.  deletevinyl     (ID)
 
 # RESERVATIONS
 1.  getallreservations
 2.  getreservation      (ID)
-3.  setreservation
+3.  putreservation
 4.  postreservation     (ID)
 5.  deletereservation   (ID)
 
