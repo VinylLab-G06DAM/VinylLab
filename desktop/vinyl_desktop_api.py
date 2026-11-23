@@ -32,10 +32,4 @@ def postVinyl(v: Vinyl):
 #PUT
 @app.put("/putvinyl/{id}")
 def updateVinyl(id: int, v: Vinyl):
-    for v in readVinyls():
-        if v.id == id:
-            updateVinyl(v);
-
-            return;
-
-    raise HTTPException(status_code=404, detail="Vinyl not found");
+    updateVinyl(id, v);

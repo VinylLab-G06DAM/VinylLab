@@ -60,3 +60,6 @@ skills/
 
 # JSON
 vinyl_ddbb.json
+users_ddbb.json
+services_ddbb.json
+reservations_ddbb.json
