@@ -32,7 +32,7 @@ def getAll(id: int) -> Vinyl:
 
 #POST
 @app.post("/postvinyl/{vinyl}")
-def postVinyl(v: Vinyl):
+def postVinyl(v: Vinyl) -> None:
     try:
         insertVinyl(v);
     except Exception as e:
@@ -40,7 +40,7 @@ def postVinyl(v: Vinyl):
 
 #PUT
 @app.put("/putvinyl/{id}")
-def putVinyl(id: int, v: Vinyl):
+def putVinyl(id: int, v: Vinyl) -> None:
     try:
         updateVinyl(id, v);
     except ValueError as e:
@@ -48,8 +48,9 @@ def putVinyl(id: int, v: Vinyl):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) from e;
 
+#DELETE
 @app.delete("/deletevinyl/{id}")
-def delVinyl(id: int):
+def delVinyl(id: int) -> None:
     try:
         deleteVinyl(id);
     except ValueError as e:
