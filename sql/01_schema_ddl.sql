@@ -1,1 +1,0 @@
--- Task 1: PostgreSQL DDL (CREATE TABLE, PK, FK, constraints, indexes)
