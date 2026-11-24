@@ -4,7 +4,7 @@ import json;
 
 from pathlib import Path;
 
-VINYL_DDBB_PATH = Path(__file__).resolve().parent.parent / "ddbb" / "vinyl_ddbb.json"
+VINYL_DDBB_PATH = Path(__file__).resolve().parent.parent / "ddbb" / "vinyls_ddbb.json";
 
 class Vinyl(BaseModel):
     id:     int;
@@ -12,20 +12,20 @@ class Vinyl(BaseModel):
     author: str;
     price:  float;
 
-def readVinyls():
+def readVinyls() -> list:
     raw = VINYL_DDBB_PATH.read_text(encoding="utf-8").strip();
     data = json.loads(raw) if raw else {"vinyls": []};
             
     return [Vinyl.model_validate(item) for item in data["vinyls"]];
 
-def insertVinyl(v: Vinyl):
+def insertVinyl(v: Vinyl) -> None:
     raw = VINYL_DDBB_PATH.read_text(encoding="utf-8").strip();
     data = json.loads(raw) if raw else {"vinyls": []};
     data.setdefault("vinyls", []).append(v.model_dump());
 
     VINYL_DDBB_PATH.write_text(json.dumps(data, indent=4), encoding="utf-8");
 
-def updateVinyl(id: int, v: Vinyl):
+def updateVinyl(id: int, v: Vinyl) -> None:
     raw = VINYL_DDBB_PATH.read_text(encoding="utf-8").strip();
 
     if not raw or raw == '{}':
@@ -46,7 +46,7 @@ def updateVinyl(id: int, v: Vinyl):
     vinyls[matches[0]] = v.model_dump();
     VINYL_DDBB_PATH.write_text(json.dumps(data, indent=4), encoding="utf-8");
 
-def deleteVinyl(id: int):
+def deleteVinyl(id: int) -> None:
     raw = VINYL_DDBB_PATH.read_text(encoding="utf-8").strip();
     
     if not raw or raw == '{}':

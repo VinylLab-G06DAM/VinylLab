@@ -68,7 +68,7 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 # RESERVATIONS
 1.  getreservations
 2.  postreservation (ID)
-3.  setreservation
+3.  putreservation
 
 ## DESKTOP
 
@@ -76,12 +76,12 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 1.  getallclients
 2.  getclient         (ID)
 3.  postclient        (ID)
-4.  setclient
+4.  putclient
 5.  deleteclient      (ID)
 
 # SERVICES
 1.  getallservices  (ID)
-2.  setservice
+2.  putservice
 3.  postservice     (ID)
 4.  deleteservice   (ID)
 
@@ -89,13 +89,13 @@ Para modificar la api escribe 'http://127.0.0.1:8000/docs' en tu nabegador.
 1.  getallvinyls
 2.  getvinyl        (ID)
 3.  postvinyl       (ID)
-4.  setvinyl
+4.  putvinyl
 5.  deletevinyl     (ID)
 
 # RESERVATIONS
 1.  getallreservations
 2.  getreservation      (ID)
-3.  setreservation
+3.  putreservation
 4.  postreservation     (ID)
 5.  deletereservation   (ID)
 
