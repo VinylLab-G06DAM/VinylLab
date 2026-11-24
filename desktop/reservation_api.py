@@ -1,6 +1,12 @@
 from fastapi import FastAPI, HTTPException
 
-from models.reservation import Reservation, insertReservation, readReservations
+from models.reservation import (
+    Reservation,
+    deleteReservation,
+    insertReservation,
+    readReservations,
+    updateReservation,
+)
 
 app = FastAPI()
 
@@ -24,3 +30,16 @@ def getOne(id: int) -> Reservation:
 @app.post("/postreservation", status_code=201)
 def postReservation(r: Reservation) -> Reservation:
     return insertReservation(r)
+
+
+#PUT
+@app.put("/putreservation/{id}")
+def putReservation(id: int, r: Reservation) -> Reservation:
+    return updateReservation(id, r)
+
+
+#DELETE
+@app.delete("/deletereservation/{id}")
+def removeReservation(id: int) -> dict:
+    deleteReservation(id)
+    return {"message": "Reservation deleted"}
