@@ -1,16 +1,6 @@
 {
     "reservations": [
         {
-            "id": 1,
-            "client_id": 1,
-            "service_id": 1,
-            "reservation_date": "2026-12-04",
-            "starts_at": "10:00:00",
-            "ends_at": "11:00:00",
-            "status": "CONFIRMED",
-            "notes": "Dos discos con polvo acumulado."
-        },
-        {
             "id": 2,
             "client_id": 2,
             "service_id": 2,
@@ -67,6 +57,16 @@
             "reservation_date": "2026-12-04",
             "starts_at": "13:00:00",
             "ends_at": "14:00:00",
+            "status": "CONFIRMED",
+            "notes": null
+        },
+        {
+            "id": 8,
+            "client_id": 1,
+            "service_id": 1,
+            "reservation_date": "2026-12-07",
+            "starts_at": "14:00:00",
+            "ends_at": "15:00:00",
             "status": "CONFIRMED",
             "notes": null
         }
