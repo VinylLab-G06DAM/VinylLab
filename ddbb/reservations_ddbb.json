@@ -22,7 +22,7 @@
         },
         {
             "id": 3,
-            "client_id": 3,
+            "client_id": 2,
             "service_id": 4,
             "reservation_date": "2026-12-04",
             "starts_at": "16:00:00",
@@ -52,7 +52,7 @@
         },
         {
             "id": 6,
-            "client_id": 3,
+            "client_id": 2,
             "service_id": 5,
             "reservation_date": "2026-11-12",
             "starts_at": "16:00:00",
