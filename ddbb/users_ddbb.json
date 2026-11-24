@@ -1,3 +1,22 @@
 {
-    "users": []
+    "users": [
+        {
+            "id": 1,
+            "name": "Ana Lopez",
+            "email": "ana@vinyllab.com",
+            "phone": "600111222",
+            "avatar": "https://example.com/ana.png",
+            "is_active": true,
+            "password_hash": "67fca81ceb13a727328f17f466af76bc$f53388e56512f2b31159b84dd30560ae34869c1e8c12f6536cade6ec08ecdb8d"
+        },
+        {
+            "id": 2,
+            "name": "Carlos Ruiz",
+            "email": "carlos@vinyllab.com",
+            "phone": "600333444",
+            "avatar": null,
+            "is_active": true,
+            "password_hash": "7ed5fccc66f064130795d9d84cf77778$b04db1956222608968fe9d621f23c660a8157d675b54c4f9b16b878feb65a81f"
+        }
+    ]
 }
