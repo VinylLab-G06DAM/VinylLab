@@ -12,24 +12,47 @@ def introduction() -> None:
 #GET
 @app.get("/getvinyls")
 def getAll() -> list:
-    return readVinyls();
+    try:
+        return readVinyls();
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
 
 @app.get("/getvinyls/{id}")
 def getAll(id: int) -> Vinyl:
-    items = readVinyls();
+    try:
+        items = readVinyls();
         
-    for vinyl in items:
-        if vinyl.id == id:
-            return vinyl;
+        for vinyl in items:
+            if vinyl.id == id:
+                return vinyl;
 
-    raise HTTPException(status_code=404, detail="Vinyl not found");
+        raise HTTPException(status_code=404, detail="Vinyl not found");
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
 
 #POST
 @app.post("/postvinyl/{vinyl}")
 def postVinyl(v: Vinyl):
-    insertVinyl(v);
+    try:
+        insertVinyl(v);
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
 
 #PUT
 @app.put("/putvinyl/{id}")
-def updateVinyl(id: int, v: Vinyl):
-    updateVinyl(id, v);
+def putVinyl(id: int, v: Vinyl):
+    try:
+        updateVinyl(id, v);
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e;
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
+
+@app.delete("/deletevinyl/{id}")
+def delVinyl(id: int):
+    try:
+        deleteVinyl(id);
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e;
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
