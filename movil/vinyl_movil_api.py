@@ -12,14 +12,20 @@ def introduction() -> None:
 #GET
 @app.get("/getvinyls")
 def getAll() -> list:
-    return readVinyls();
+    try:
+        return readVinyls();
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
 
 @app.get("/getvinyls/{id}")
 def getAll(id: int) -> Vinyl:
-    items = readVinyls();
+    try:
+        items = readVinyls();
         
-    for vinyl in items:
-        if vinyl.id == id:
-            return vinyl;
+        for vinyl in items:
+            if vinyl.id == id:
+                return vinyl;
 
-    raise HTTPException(status_code=404, detail="Vinyl not found");
+        raise HTTPException(status_code=404, detail="Vinyl not found");
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e;
