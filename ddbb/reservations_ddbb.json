@@ -59,6 +59,16 @@
             "ends_at": "18:00:00",
             "status": "CANCELLED",
             "notes": "Cancelada por la clienta."
+        },
+        {
+            "id": 7,
+            "client_id": 1,
+            "service_id": 1,
+            "reservation_date": "2026-12-04",
+            "starts_at": "13:00:00",
+            "ends_at": "14:00:00",
+            "status": "CONFIRMED",
+            "notes": null
         }
     ]
 }
